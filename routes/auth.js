@@ -25,7 +25,7 @@ console.log("aqui2" , password);
     console.log("true o false ??" , isValidUser)
     
     // si el usuario y la contraseña son válidos, genera un token JWT y responde con él
-    const token = isValidUser ? jwt.sign({ proyectoName }, secretKey, { expiresIn: "2m"  }) : null;
+    const token = isValidUser ? jwt.sign({ proyectoName }, secretKey, { expiresIn: "5d"  }) : null;
     
     return token ? res.json({ token }) : res.status(401).json({ message: "proyectoName or password are invalid" });
     console.log("salio bien")
